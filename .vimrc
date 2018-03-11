@@ -9,8 +9,7 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
  
 Plugin 'gmarik/Vundle.vim'              " let Vundle manage Vundle, required
-Plugin 'vim-airline/vim-airline-themes'
-
+Plugin 'blueshirts/darcula'
 "---------=== Навигация по коду/проекту ===-------------
 Plugin 'scrooloose/nerdtree'            " Project and file navigation
 Plugin 'majutsushi/tagbar'              " Class/module browser
@@ -34,7 +33,12 @@ Plugin 'klen/python-mode'               " Python mode (docs, refactor, lints, hi
 Plugin 'davidhalter/jedi-vim'           " Jedi-vim autocomplete plugin
 Plugin 'mitsuhiko/vim-jinja'            " Jinja support for vim
 Plugin 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
- 
+
+" --- Perl ---
+Plugin 'wolfgangmehner/perl-support'
+Plugin 'vim-perl/vim-perl'
+Plugin 'c9s/perlomni.vim'
+
 call vundle#end()                       " required
 filetype on
 filetype plugin on
@@ -118,13 +122,6 @@ augroup END
  
 " указываем каталог с настройками SnipMate
 let g:snippets_dir = "~/.vim/vim-snippets/snippets"
- 
-" настройки Vim-Airline
-set laststatus=2
-let g:airline_theme='badwolf'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
  
 " TagBar настройки
 map <F4> :TagbarToggle<CR>
